@@ -1,36 +1,27 @@
-import Signup from "./Signup.js";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signin from "./Signin.js";
-
-
+import Signup from "./Signup.js";
+// import Appbar from "./Appbar.js";
+// import AddCourse from "./AddCourse.js";
 
 function App() {
 
-
-
     return (
-        <>
-            <h1>Hello World</h1>
+        <div>
 
-            <div style={{
-                display: "flex"
-                , justifyContent: "space-between"
-                , color: "Blue"
-
-
-            }}>
-                <div>
-                    <h3>Coursera</h3>
-                </div>
-                <div>
-                    <h3>Signin</h3>
-                    <h3>Signup</h3>
-                </div>
+            <Router>
+                <Routes>
+                    <Route path={"/signin"} element={<Signin />} />
+                    <Route path={"/signup"} element={<Signup />} />
+                </Routes>
 
 
+            </Router>
+            <Signin></Signin>
+            <Signup></Signup>
 
-
-            </div >
-        </>)
+        </div >
+    )
 }
 
 export default App;

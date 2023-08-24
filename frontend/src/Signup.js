@@ -1,0 +1,65 @@
+import Button from '@mui/material/Button';
+import TextField from "@mui/material/TextField";
+import { Card, Typography } from "@mui/material";
+import { useState } from "react";
+
+
+
+function SignUp() {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    return <div>
+
+        <div style={{
+            // paddingTop: 150,
+
+        }}>
+
+            <Typography variant={"h6"}>
+                Welcome to Coursera
+            </Typography>
+        </div>
+        <div style={{ display: "flex" }}>
+
+            <Card variant={"outlined"} style={{ width: 400, padding: 20 }}>
+                <TextField
+                    onChange={(e) => {
+                        let elemt = e.target;
+                        setEmail(elemt.value)
+                    }}
+                    fullWidth={true}
+                    label="Email"
+                    variant='outlined'></TextField>
+
+                <br /> <br />
+
+                <TextField
+                    onChange={(e) => {
+                        setPassword(e.target.value);
+                    }}
+
+                    fullWidth={true}
+                    label="Password"
+                    variant="outlined"
+                    type={"password"}
+                >
+                </TextField>
+
+                <br /> <br />
+                <Button
+                    type='medium'
+                    variant='outlined'
+
+
+
+                >SignUp</Button>
+
+            </Card>
+
+        </div>
+
+    </div >
+
+}
+export default SignUp;
