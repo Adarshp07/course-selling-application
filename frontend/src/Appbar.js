@@ -1,6 +1,9 @@
-import { Typography } from "@mui/material";
+// import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
+
+
+
 function Appbar() {
     const navigate = useNavigate();
     return <div style={{
@@ -9,12 +12,24 @@ function Appbar() {
         padding: 4
 
     }}>
+
         <div>
-            <Typography variant={'h3'}
+            <div className="coursera" style={{
+                color: "white",
+                height: "100%",
+                width: "102%",
+                backgroundColor: "blue"
+                , textAlign: "center"
+                , paddingTop: 10,
+                border: "2px solid black"
+                , margin: "3px",
+                cursor: "pointer"
+            }}
                 onClick={() => {
                     navigate("/landing")
                     //added link
-                }}>Coursera</Typography>
+                }}
+            >Coursera</div>
         </div>
         <div style={{ display: "flex" }}>
             <div style={{ marginRight: 10 }}>
@@ -38,7 +53,7 @@ function Appbar() {
         </div>
 
 
-    </div>
+    </div >
 
 
 

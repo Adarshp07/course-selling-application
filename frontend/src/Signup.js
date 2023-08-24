@@ -10,19 +10,19 @@ function SignUp() {
     const [password, setPassword] = useState("")
 
     return <div>
-
         <div style={{
-            // paddingTop: 150,
-
+            paddingTop: 150,
+            marginBottom: 10,
+            display: "flex",
+            justifyContent: "center"
         }}>
 
             <Typography variant={"h6"}>
-                Welcome to Coursera
+                Welcome to Coursera, Sign up below
             </Typography>
         </div>
-        <div style={{ display: "flex" }}>
-
-            <Card variant={"outlined"} style={{ width: 400, padding: 20 }}>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+            <Card varint={"outlined"} style={{ width: 400, padding: 20 }}>
                 <TextField
                     onChange={(e) => {
                         let elemt = e.target;
