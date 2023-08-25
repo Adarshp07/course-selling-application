@@ -48,8 +48,28 @@ function SignUp() {
 
                 <br /> <br />
                 <Button
-                    type='medium'
-                    variant='outlined'
+                    size={"large"}
+                    variant="contained"
+                    onClick={() => {
+                        function callback2(data) {
+                            localStorage.setItem("token", data.token);
+                        }
+                        function callback1(res) {
+                            res.json().then(callback2)
+                        }
+                        fetch("http://localhost:3000/admin/signup", {
+                            method: "POST",
+                            body: JSON.stringify({
+                                username: email,
+                                password: password
+                            }),
+                            headers: {
+                                "Content-type": "application/json"
+                            }
+                        })
+                            .then(callback1)
+                    }}
+
 
 
 

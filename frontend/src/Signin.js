@@ -1,13 +1,11 @@
 import Button from '@mui/material/Button';
 import TextField from "@mui/material/TextField";
 import { Card, Typography } from "@mui/material";
-import { useState } from "react";
+
 
 
 
 function SignIn() {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
 
     return <div>
         <div style={{
@@ -24,10 +22,7 @@ function SignIn() {
         <div style={{ display: "flex", justifyContent: "center" }}>
             <Card varint={"outlined"} style={{ width: 400, padding: 20 }}>
                 <TextField
-                    onChange={(e) => {
-                        let elemt = e.target;
-                        setEmail(elemt.value)
-                    }}
+
                     fullWidth={true}
                     label="Email"
                     variant='outlined'></TextField>
@@ -35,10 +30,9 @@ function SignIn() {
                 <br /> <br />
 
                 <TextField
-                    onChange={(e) => {
-                        setPassword(e.target.value);
-                    }}
-                    dynamic-txts
+
+
+
                     fullWidth={true}
                     label="Password"
                     variant="outlined"
@@ -48,8 +42,10 @@ function SignIn() {
 
                 <br /> <br />
                 <Button
-                    type='medium'
-                    variant='outlined'
+
+                    size={"large"}
+                    variant="contained"
+
 
 
 
